@@ -47,3 +47,16 @@ body {
 mat-toolbar.bg-primary-container {
   background-color: var(--mat-sys-primary);
 }
+
+::view-transition-old(root) {
+  animation: fade-out 200ms ease-out;
+}
+::view-transition-new(root) {
+  animation: fade-in 300ms ease-in;
+}
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+}

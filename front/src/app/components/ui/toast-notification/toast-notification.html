@@ -1,0 +1,19 @@
+@for (pos of positions; track pos) {
+  @if (grouped()[pos]; as items) {
+    <div class="fixed z-50 pointer-events-none {{ positionClass(pos) }}">
+      @for (item of items; track item.id) {
+        <div
+          class="pointer-events-auto flex items-start gap-3 rounded-xl px-4 py-3 shadow-lg min-w-72 max-w-sm mb-2 toast-item
+            {{ typeClass(item.type) }}"
+          (click)="dismiss(item.id)"
+        >
+          <mat-icon class="text-lg">{{ icon(item.type) }}</mat-icon>
+          <span class="text-sm flex-1">{{ item.message }}</span>
+          <button class="text-current opacity-60 hover:opacity-100 cursor-pointer" (click)="$event.stopPropagation(); dismiss(item.id)">
+            <span>✕</span>
+          </button>
+        </div>
+      }
+    </div>
+  }
+}

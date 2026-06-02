@@ -1,0 +1,24 @@
+<div class="flex flex-col items-center justify-center ">
+    
+        <div class="w-1/4 h-screen">
+            
+            <fieldset class=" shadow-md px-5 rounded-3xl m-auto align-center ">
+                <legend class="bg-primary p-2 text-center text-3xl rounded-tr-2xl rounded-bl-2xl mb-5 text-amber-50">AnguNet</legend>
+                <app-input [data]="{
+                    label:'email',
+                    type:'email',
+                    name:'email',
+                    icon:'person',
+                }"/>
+
+               <app-input [data]="{
+                    label:'password',
+                    type:'password',
+                    name:'password',
+                    icon:'lock',
+                }"/>
+                <button (click)="login()" matButton="filled" class="mb-2">Sign In</button>
+            </fieldset>
+        </div>
+    
+</div>

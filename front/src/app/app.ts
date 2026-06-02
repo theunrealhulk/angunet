@@ -1,17 +1,14 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Header } from "./components/header/header";
+import { ToastNotification } from './components/ui/toast-notification/toast-notification';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header],
+  imports: [RouterOutlet, ToastNotification],
   template: `
-    
-    <app-header/>
     <router-outlet />
+    <toast-notification />
   `,
   styles: [],
 })
-export class App {
-  
-}
+export class App {}
