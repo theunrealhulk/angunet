@@ -7,8 +7,19 @@
 
 html {
   height: 100%;
-  @include mat.theme((color: (primary: mat.$cyan-palette,
+  @include mat.theme((color: (primary: mat.$azure-palette,
         tertiary: mat.$orange-palette,
+        theme-type: light,
+      ),
+      typography: 'Inter',
+      density: 0,
+    ));
+}
+
+html.dark {
+  @include mat.theme((color: (primary: mat.$yellow-palette,
+        tertiary: mat.$orange-palette,
+        theme-type: dark,
       ),
       typography: 'Inter',
       density: 0,
@@ -19,7 +30,7 @@ body {
   // Default the application to a light color theme. This can be changed to
   // `dark` to enable the dark color theme, or to `light dark` to defer to the
   // user's system settings.
-  color-scheme: light;
+  color-scheme: light dark;
 
   // Set a default background, font and text colors for the application using
   // Angular Material's system-level CSS variables. Learn more about these
@@ -33,4 +44,6 @@ body {
   height: 100%;
 }
 
-/* You can add global styles to this file, and also import other style files */
+mat-toolbar.bg-primary-container {
+  background-color: var(--mat-sys-primary);
+}

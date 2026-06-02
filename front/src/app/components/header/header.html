@@ -1,0 +1,32 @@
+<mat-toolbar class="bg-primary-container">
+    <span class=" border-2 p-2 rounded-tr-2xl rounded-bl-2xl cursor-pointer text-white">AnguNet</span>
+    <span class="example-spacer"></span>
+
+    <button matIconButton class="font-extralight" aria-label="Toggle theme" (click)=themeSwitcher.toggle()>
+        @if (themeSwitcher.theme() === Theme.dark) {
+        <mat-icon>light_mode</mat-icon>
+        } @else {
+        <mat-icon>mode_night</mat-icon>
+        }
+    </button>
+</mat-toolbar>
+<div class="text-3xl font-black  flex flex-col gap-3">
+    <div class="text-primary">text-primary</div>
+    <div class="text-primary-container">text-primary-container</div>
+    <div class="text-on-primary bg-primary">text-on-primary bg-primary</div>
+    <hr>
+    <div class="text-secondary">text-secondary</div>
+    <div class="text-secondary-container">text-secondary</div>
+    <div class="text-on-secondary bg-secondary">text-on-secondary bg-secondary</div>
+    <hr>
+    <div class="text-tertiary">text-tertiary</div>
+    <div class="text-tertiary-container">text-tertiary</div>
+    <div class="text-on-tertiary bg-tertiary ">text-on-tertiary bg-tertiary</div>
+    <hr>
+    <div class="text-error">text-error</div>
+    <div class="text-error-container">text-error</div>
+    <div class="text-on-error bg-error">text-on-error bg-error</div>
+    <hr>
+    <div class="text-surface bg-white">text-surface</div>
+    <div class="text-surface-variant ">bg-surface-variant</div>
+</div>
