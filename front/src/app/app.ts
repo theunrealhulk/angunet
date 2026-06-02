@@ -5,12 +5,12 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   template: `
-    <h1>Hello, {{ title() }}</h1>
+    <h1 class="font-bold">Hello, {{ title() }}</h1>
 
     <router-outlet />
   `,
   styles: [],
 })
 export class App {
-  protected readonly title = signal('front');
+  protected readonly title = signal('AnguNet');
 }

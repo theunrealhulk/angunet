@@ -1,0 +1,8 @@
+
+Front:
+  - setup core ui
+  - services , guards, models, directives, pipes
+  - testing
+Back:
+  - dotnet 10 core app with minimal api
+  - mailing , auth service trusted device with OTP code verification
