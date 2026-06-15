@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ToastNotification } from './components/ui/toast-notification/toast-notification';
+import { ThemeSwitcher } from './services/ui/theme-switcher';
 
 @Component({
   selector: 'app-root',
@@ -11,4 +12,8 @@ import { ToastNotification } from './components/ui/toast-notification/toast-noti
   `,
   styles: [],
 })
-export class App {}
+export class App {
+  private readonly themeSwitcher = inject(ThemeSwitcher);
+}
+// test
+ 

@@ -5,10 +5,10 @@ import type { Toast } from './toast.service';
 import type { ToastPosition, ToastType } from '../../../interfaces/ui/types';
 
 const TYPE_CLASSES: Record<ToastType, string> = {
-  info: 'bg-sky-600 text-white',
-  warning: 'bg-amber-600 text-white',
-  error: 'bg-red-600 text-white',
-  success: 'bg-emerald-600 text-white',
+  info: 'bg-primary-container text-on-primary-container border border-outline/20',
+  warning: 'bg-tertiary-container text-on-tertiary-container border border-outline/20',
+  error: 'bg-error-container text-on-error-container border border-outline/20',
+  success: 'bg-primary text-on-primary',
 };
 
 const ICONS: Record<ToastType, string> = {
@@ -44,8 +44,14 @@ const POSITIONS: ToastPosition[] = [
     .toast-item {
       animation: t-fade-in 200ms ease-out both;
     }
+    .toast-item.dismissing {
+      animation: t-fade-out 200ms ease-in both;
+    }
     @keyframes t-fade-in {
       from { opacity: 0; translate: 0 -0.75rem; }
+    }
+    @keyframes t-fade-out {
+      to { opacity: 0; translate: 0 -0.75rem; }
     }
   `,
 })
@@ -63,7 +69,7 @@ export class ToastNotification {
     return groups;
   });
 
-  constructor(private readonly service: ToastService) {}
+  constructor(private readonly service: ToastService) { }
 
   protected positionClass(pos: ToastPosition): string {
     return POSITION_CLASSES[pos];

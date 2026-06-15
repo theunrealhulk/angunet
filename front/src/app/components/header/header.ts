@@ -1,20 +1,14 @@
-import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
+import { Component } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { ThemeSwitcher } from '../../services/ui/theme-switcher';
-import { Theme } from '../../../interfaces/ui';
+import { ThemeSwitcherButton } from '../ui/themeSwitcher/theme-switcher-button';
 
 @Component({
   selector: 'app-header',
-  imports: [MatIconModule, MatButtonModule, MatToolbarModule],
+  imports: [MatToolbarModule, ThemeSwitcherButton],
   templateUrl: `header.html`,
   styles: `
    .example-spacer {
       flex: 1 1 auto;
     }`,
 })
-export class Header {
-  protected themeSwitcher = inject(ThemeSwitcher);
-  protected Theme = Theme;
-}
+export class Header {}

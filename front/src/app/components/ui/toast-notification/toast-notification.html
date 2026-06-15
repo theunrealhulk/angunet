@@ -5,6 +5,7 @@
         <div
           class="pointer-events-auto flex items-start gap-3 rounded-xl px-4 py-3 shadow-lg min-w-72 max-w-sm mb-2 toast-item
             {{ typeClass(item.type) }}"
+          [class.dismissing]="item.dismissing"
           (click)="dismiss(item.id)"
         >
           <mat-icon class="text-lg">{{ icon(item.type) }}</mat-icon>

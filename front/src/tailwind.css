@@ -16,5 +16,10 @@
     --color-outline: var(--mat-sys-outline);
     --color-error: var(--mat-sys-error);
     --color-on-error: var(--mat-sys-on-error);
+
+    --color-error-container: var(--mat-sys-error-container);
+    --color-on-error-container: var(--mat-sys-on-error-container);
+    --color-tertiary-container: var(--mat-sys-tertiary-container);
+    --color-on-tertiary-container: var(--mat-sys-on-tertiary-container);
 }
 

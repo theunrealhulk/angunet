@@ -1,0 +1,7 @@
+<button matIconButton class="font-extralight" aria-label="Toggle theme" (click)=themeSwitcher.toggle()>
+    @if (themeSwitcher.theme() === Theme.dark) {
+    <mat-icon>light_mode</mat-icon>
+    } @else {
+    <mat-icon>mode_night</mat-icon>
+    }
+</button>
