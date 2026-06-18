@@ -1,0 +1,31 @@
+<div>
+    <form [formGroup]="form">
+
+        <app-input-field [control]="$any(form.get('email')) " [data]="{
+            label:'email',
+            type:'email',
+            name:'email',
+            icon:'mail',
+            isDisabled:isWaitingVerification()
+        }" />
+        <div class="mb-5 flex items-center justify-between">
+            @if(isRequestingVerification()){
+            <button matButton="filled" [disabled]="form.controls.email.invalid" (click)="sendCode()">
+                Send Code
+            </button>
+            }@if (isWaitingVerification()) {
+
+            <app-input-field [control]="$any(form.get('verificationCode'))" [data]="{
+                    label:'4-digits code', 
+                    type:'number',
+                    name:'verificationCode',
+                    icon:'key'
+                }" />
+            <button matButton="filled" [disabled]="form.controls.verificationCode.invalid" (click)="verifyCode()">
+                Verify Code
+            </button>
+            }
+
+        </div>
+    </form>
+</div>

@@ -9,6 +9,7 @@ interface FieldInput {
   name: string,
   label: string,
   icon?: string,
+  isDisabled?: boolean
 }
 @Component({
   selector: 'app-input-field',
@@ -41,8 +42,9 @@ interface FieldInput {
               @if (control().hasError('email')) {
                   <span>Please enter a valid email address.</span>
               }
-              @if (control().hasError('minlength')) {
-                  <span>Password must be at least {{ control().errors?.['minlength'].requiredLength }} characters.</span>
+       
+              @if(control().hasError('pattern')) {
+                  <span>Password must contain at least 8 charachters, include mixed-case letters,digits, symbols.</span>
               }
           </mat-error>
       }
