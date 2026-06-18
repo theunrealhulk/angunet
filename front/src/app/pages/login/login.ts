@@ -27,15 +27,7 @@ export class Login {
         next: (res) => {
           this.toast.show({ type: 'success', message: 'WIP successfully authenticated!' })
           const token = res.data
-          //redirect to home page
-          /**
-           * {
-    "success": true,
-    "message": "Login successful",
-    "statusCode": 200,
-    "data": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJjaGFmaWFheUB5b3BtYWlsLmNvbSIsImV4cCI6MTc4MTc5MTAxMSwiaXNzIjoiSk9CLUgtSSIsImF1ZCI6IkpPQi1ILUEifQ.9HCSkt17uLe9ejyl0sRxY9CmbqfmSQsI0BVmWXs39X-FRbOgjucNavO_65misB17H06-yCBdwwha4iM4Vsj2WQ"
-}
-           */
+          //redirect to dashboard
           this.router.navigate(['/dashboard']);
         },
         error: (res) => {

@@ -1,5 +1,10 @@
 <mat-toolbar class="bg-primary-container">
     <span class="border-2 p-2 rounded-tr-2xl rounded-bl-2xl cursor-pointer text-white">AnguNet</span>
     <span class="example-spacer"></span>
+    <button matButton (click)="logOut()">
+        <mat-icon >
+            logout
+        </mat-icon>
+    </button>
     <theme-switcher-button />
 </mat-toolbar>
