@@ -1,8 +1,10 @@
 
 Front:
-  - setup core ui
-  - services , guards, models, directives, pipes
   - testing
+  - setup logout, reset password
+  - build dashboard and settings pages
+  - Staff users Dashboard
 Back:
-  - dotnet 10 core app with minimal api
-  - mailing , auth service trusted device with OTP code verification
+  - add rest of models of build business logic
+  - add seperate email template
+  - refactor send mail
